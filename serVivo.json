@@ -1,0 +1,24 @@
+[{
+    "Tipo de Ser Vivo": {
+        "Animal": {
+        "Características": {
+            "Pelos": ["Sim", "Não"],
+            "Número de Patas": [2, 4, 6, 8],
+            "Alimentação": ["Carnívoro", "Herbívoro", "Onívoro"]
+        }
+        },
+        "Planta": {
+        "Características": {
+            "Tipo": ["Árvore", "Arbusto", "Flor"],
+            "Folhas": ["Perenes", "Caducas"],
+            "Flores": ["Sim", "Não"]
+        }
+        },
+        "Fungo": {
+        "Características": {
+            "Forma": ["Cogumelo", "Mofo", "Levedura"],
+            "Hábitat": ["Terrestre", "Aquático"]
+        }
+        }
+    }
+}]
