@@ -28,7 +28,7 @@ void printTree(Node* root, int level) {
     }
 }
 
-int main() {
+Node init() {
     Node tipoSerVivo = {"Tipo de Ser Vivo", NULL, 3};
 
     Node animal = {"Animal", NULL, 1};
@@ -66,8 +66,38 @@ int main() {
     tipoSerVivo.children[0] = animal;
     tipoSerVivo.children[1] = planta;
     tipoSerVivo.children[2] = fungo;
+    return tipoSerVivo;
+}
 
-    printTree(&tipoSerVivo, 0);
+
+void navigateTree(Node* currentNode) {
+    printf("%s\n", currentNode->label);
+
+    if (currentNode->numChildren > 0) {
+        printf("Opções:\n");
+        for (int i = 0; i < currentNode->numChildren; i++) {
+            printf("%d. %s\n", i + 1, currentNode->children[i].label);
+        }
+
+        int choice;
+        printf("Escolha uma opção: ");
+        scanf("%d", &choice);
+
+        if (choice > 0 && choice <= currentNode->numChildren) {
+            navigateTree(&(currentNode->children[choice - 1]));
+        } else {
+            printf("Opção inválida.\n");
+        }
+    }
+}
+
+
+int main() {
+
+    Node arvore = init();
+
+    // printTree(&arvore, 0);
+    navigateTree(arvore);
 
     return 0;
 }
