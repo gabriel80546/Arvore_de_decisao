@@ -93,9 +93,6 @@ Node init() {
     return tipoSerVivo;
 }
 
-
-
-
 int main() {
 
     // Node* arvore = 
